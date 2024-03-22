@@ -60,7 +60,7 @@ app.post("/login", async (req, res) => {
             res.send("wrong Password");
         }
         else {
-            res.render("../views/home.html");
+            res.sendFile(path.join(__dirname, "../views/home.html"));
         }
     }
     catch {

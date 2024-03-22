@@ -10,14 +10,823 @@
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <style>
+      
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+   
+}
+html{
+    scroll-behavior: smooth;
+}
+.nav-links {
+    list-style-type: none;
+    display: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 15px;
+    background: #1b001b;
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f5f5f5;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons :hover {
+    color: #e700e7;
+    transform: translateY(-10%);
+}
+
+.social-icons {
+    display: block;
     
+}
+
+.nav-container {
+    padding: 0 20px 2px;
+    background: rgba(78, 0, 78, 0.8);
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.nav-container img {
+    width: 50px;
+   
+    align-self: center;
+}
+
+.line1, .line2, .line3 {
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+    background: #ffe7ff;
+    transition: transform 2s ease, opacity 2s ease;
+}
+
+.btn {
+    padding: 2px;
+    display: inline-block;
+    cursor: pointer;
+    align-self: center;
+}
+
+.change .line1 {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: rotate(45deg) translate(-7px, -8px);
+}
+
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(24, 2, 27, 0.8), rgba(162, 0, 193, 0.3)), url(images/hero2.jpg) center/cover fixed no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    flex: 0 0 auto;
+}
+
+nav ul li:last-of-type {
+    display: flex;
+}
+
+nav ul li:last-of-type a {
+    display: flex;
+    flex: 1 0 auto;
+    text-align-last: center;
+}
+
+.fab {
+    font-size: 30px;
+}
+
+.nav-links .social-icons a:hover {
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition: background 2s ease;
+}
+
+.navBackground {
+    background: rgba(34, 0, 40, 0.8);
+}
+
+.main-title {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-text {
+    flex: 0 0 90%;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.main-text h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.main-text p {
+    margin: 0 auto;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    margin-left: 32px;
+    color: white;
+}
+
+.main-btn {
+    text-transform: uppercase;
+    color: #f5f5f5;
+    letter-spacing: 5px;
+    border: 3px solid #f5f5f5;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+
+.main-btn:hover {
+    background: #bf00e3;
+    color: #f5f5f5;
+}
+
+@media screen and (min-width: 992px) {
+    .btn {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .nav-container {
+        background: transparent;
+        flex: 0 0 auto;
+    }
+
+    .nav-links {
+        padding: 0 20px;
+        flex: 1 0 auto;
+        display: flex!important;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .nav-links li {
+        flex: 1 0 auto;
+    }
+
+    .nav-links a {
+        background: transparent;
+        text-align: center;
+        color: #f5f5f5;
+    }
+
+    .social-icons {
+        flex: 1 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0 20px;
+    }
+
+    .social-icons {
+        font-size: 40px;
+    }
+
+    .social-icons a:hover {
+        color: #e700e7;
+        transform: translateY(-10%);
+    }
+}
+
+/* About Section */
+.section-center {
+    width: 80vw;
+    padding: 4rem 0;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.about {
+    background: #ffffff;
+}
+
+.about-img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.about-img,
+.about-info {
+    margin-bottom: 64px;
+}
+
+.about-info h2 {
+    text-transform: uppercase;
+}
+
+.abt-text {
+    margin-bottom: 20px;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.about-btn {
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 4px;
+    border: 3px solid white;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 30px;
+    padding: 0.9rem 1.6rem;
+    opacity: 1;
+}
+
+.about-btn:hover {
+    opacity: 1;
+    border: 3px solid #e700e7;
+}
+
+/* End of About Section */
+
+/* Work out Section */
+
+#workout {
+    background: #4e004e;
+    padding: 40px;
+}
+
+#workout .title {
+    font-size: 60px;
+    text-transform: capitalize;
+    color: #f5f5f5;
+    text-align: center;
+    margin: 25px 0 20px 0;
+}
+
+.service {
+    text-align: center;
+    margin: 20px 0;
+    color: #f5f5f5;
+}
+
+.service .fas {
+    padding: 20px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.service h3 {
+    margin: 10px 0 15px 0;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.service p {
+    line-height: 1.5;
+    width: 75%;
+    margin: 10px auto;
+    font-weight: lighter;
+}
+
+@media screen and (min-width: 576px) {
+    .work-center {
+        max-width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap        ;
+        justify-content: space-between;
+    }
+
+    .service {
+        flex: 0 0 calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width: 776px) {
+    .service {
+        flex: 0 0 calc(25% - 1em);
+    }
+}
+
+/* End of Work out section */
+
+/* Testimonial */
+
+#testimonial {
+    padding: 40px;
+    background: #ffff;
+}
+
+#testimonial .title {
+    font-size: 60px;
+    text-transform: capitalize;
+    color: #1b001b;
+    text-align: center;
+    margin: 25px 0 20px 0;
+}
+
+.testimonial {
+    color: #1b001b;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    max-width: 200px;
+}
+
+.testimonial h3 {
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: #1b001b;
+}
+
+.testimonial p {
+    line-height: 1.5;
+    width: 75%;
+    margin: 10px auto;
+    font-weight: lighter;
+}
+
+@media screen and (min-width: 576px) {
+    .client-center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .testimonial {
+        flex: 0 0 calc(35% - 3em);
+    }
+}
+
+/* End of testimonial */
+
+/* Our Classes Section */
+
+#classes {
+    background: #4e004e;
+    padding: 40px;
+}
+
+#classes .title {
+    font-size: 60px;
+    text-transform: capitalize;
+    color: #f5f5f5;
+    text-align: center;
+    margin: 25px 0 20px 0;
+}
+
+.classes-container {
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.class-item {
+    background-color: #4e004e;
+    color: #f5f5f5;
+    margin: 20px 0;
+}
+
+#classes img {
+    width: 100%;
+    display: block;
+}
+
+.img-container {
+    position: relative;
+}
+
+.class-item h4 {
+    margin-top: 10px;
+    margin-left: 180px;
+}
+
+@media screen and (min-width: 576px) {
+    .classes-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .classes-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+    }
+}
+
+/* End of Classes */
+
+/* Subscription */
+
+#subscribe {
+    padding: 40px;
+    background: #ffff;
+}
+
+#subscribe .title {
+    font-size: 60px;
+    text-transform: capitalize;
+    color: #1b001b;
+    text-align: center;
+    margin: 25px 0 20px 0;
+}
+
+.input-group {
+    width: 80vw;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.form-control {
+    flex: 1 1 auto;
+}
+
+.form-control,
+.btn-submit {
+    padding: 0.375rem 0.57rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: mainSpacing;
+    background: #ffff;
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid #1b001b;
+}
+
+::placeholder {
+    color: #1b001b;
+}
+
+.btn-submit {
+    border-left: none;
+    cursor: pointer;
+    background: #1b001b;
+    color: #ffff;
+}
+
+.btn-submit:hover {
+    color: #ffff;
+    background-color: #4e004e;
+}
+
+/* End of Subscription */
+
+/* Footer */
+
+footer {
+    background-color: #1b001b;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.footer-text {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #ffff;
+    margin-bottom: 10px;
+}
+
+.terms {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #ffff;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --green: #43aa8b;
+    --red: #bc4749;
+}
+
+body{
+    background-color: #edf6f9;
+    font-family: 'Andika New Basic', sans-serif;
+    color: #2f3e46;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.budget__numbers{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 700px;
+    margin: 1rem 0 3rem;
+}
+
+.number{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.amount__container{
+    display: flex;
+}
+
+#amount_earned,#earned_symbol{color: var(--green);}
+#amount_spent,#spent_symbol{color: var(--red);}
+
+.input__area input{
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+}
+
+.input__area #description{
+    width: 330px;
+}
+
+.input__area #amount{
+    width: 70px;
+    text-align: center;
+}
+
+/* remove arrows from number input */
+.input__area input::-webkit-outer-spin-button,
+.input__area input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.buttons__area{
+    margin: 10px 0 3rem;
+}
+
+.buttons_area #add_income,
+.buttons_area #add_expense{
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+#add__income{background-color: var(--green);}
+#add__expense{background-color: var(--red);}
+
+.items__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 70%;
+    max-width: 700px;
+}
+
+#income__container h2{color: var(--green);}
+#expenses__container h2{color: var(--red);}
+
+.items__container .container{
+    width: 49%;
+    border-radius: 15px;
+}
+
+.container .item{
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px 5px 30px;
+    position: relative;
+}
+
+.item__income,
+.item__expense{
+    display: flex;
+}
+
+.income span, .income p{color: var(--green);}
+.expense span, .expense p{color: var(--red);}
+
+.item .far{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--red);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.item:hover .far{
+    animation: showDelete;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showDelete{
+    0%{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.expense{
+    font-family: Arial, sans-serif;
+  color: #eee;
+  background: #141e30;
+  background: linear-gradient(to right, #243b55, #141e30);
+  
+  
+}
+.btn-expenses{
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding: 10px 20px;
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background-color: #219ebc;
+  color: #fff;
+  border-radius: 3px;
+}
+h1.heading {
+  text-align: center;
+  margin-block: 50px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.wrapper .container {
+  max-width: 992px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-items: flex-start;
+  gap: 60px;
+}
+.form_wrapper {
+  display: grid;
+  gap: 30px;
+}
+.form_wrapper form:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form_wrapper form input {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  outline: none;
+  border: 1px solid #aaa;
+  background-color: transparent;
+  border-radius: 3px;
+  color: #eee;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+table button {
+  padding: 5px;
+  font-size: 20px;
+  background-color: #00bbf9;
+}
+table button:first-child {
+  margin-right: 8px;
+}
+#product-table thead th {
+  font-size: 18px;
+  color: #eee;
+}
+.budget_tacker_info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.budget_tacker_info > div:last-child {
+  grid-column: span 2;
+}
+.budget_tacker_info > div {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  font-size: 25px;
+  border-bottom: 2px solid #ff0000;
+}
+.budget_tacker_info > div:nth-child(2) {
+  border-color: #ff5300;
+}
+.budget_tacker_info > div:last-child {
+  border-color: #00ff00;
+}
+.budget_tacker_info > div h1 {
+  margin-block: 20px;
+  word-break: break-all;
+  font-size: 30px;
+}
+    </style>
 </head>
 <body>
     <!--Header-=====================-->
  <header>
      <nav>
          <div class="nav-container">
-             <img src="../public/logo.svg" alt="logo" class="logo">
              <div class="btn">
                  <div class="line1"></div>
                  <div class="line2"></div>
@@ -166,36 +975,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    <!--=========End of Work out Section===============-->
  <!--=========Testimonial  Section===============-->
  <section id="testimonial">
@@ -316,19 +1095,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!---Jquery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -346,5 +1112,409 @@
       }
   </script>
 
+<script>
+  // Get references to the necessary DOM elements
+const productNameInput = document.getElementById('product_name')
+const productPriceInput = document.getElementById('product_price')
+const numberOfproduct = document.getElementById('numberofproduct')
+const totalMoneyInput = document.getElementById('total_budget')
+const addProductButton = document.getElementById('add_product')
+const productTableBody = document.querySelector('#product_table tbody')
+const totalValue = document.getElementById('total_expenses')
+const remainingValue = document.getElementById('remaining_value')
+const totalMoney = document.getElementById('total')
+// Initialize some variables
+let products = []
+let total = 0
+let remaining = 0
+let selectedProductIndex = -1
+// Define the function to add a new product
+function addProduct() {
+  // Get the product name and price from the input fields
+  const name = productNameInput.value.trim()
+  const price = parseFloat(productPriceInput.value)
+  const number = parseInt(numberOfproduct.value)
+  // Validate the input fields
+  if (name === '' || isNaN(price)) {
+    alert('Please enter a valid product name and price.')
+    return
+  }
+  // Add the new product to the products array
+  products.push({
+    name: name,
+    TotalProductNum: number,
+    price: price,
+  })
+  // Calculate the new total and remaining values
+  total = products.reduce(
+    (acc, currentValue) =>
+      acc + currentValue.price * currentValue.TotalProductNum,
+    0
+  )
+  remaining = totalMoneyInput.value - total
+  totalMoney.textContent = totalMoneyInput.value
+  // Update the table and total/remaining values
+  updateTable()
+  updateTotal()
+  updateRemaining()
+  // Clear the input fields
+  productNameInput.value = ''
+  productPriceInput.value = ''
+  numberOfproduct.value = ''
+}
+// Define the function to update the table
+function updateTable() {
+  // Clear the existing table rows
+  productTableBody.innerHTML = ''
+  // Loop through the products array and add a new row for each product
+  for (let i = 0; i < products.length; i++) {
+    const product = products[i]
+    const row = document.createElement('tr')
+    const nameCell = document.createElement('td')
+    const priceCell = document.createElement('td')
+    const actionsCell = document.createElement('td')
+    nameCell.textContent =
+      product.name +
+      ' ' +
+      '(' +
+      product.TotalProductNum +
+      'x' +
+      product.price +
+      ')'
+    priceCell.textContent = product.price.toFixed(2) * product.TotalProductNum
+    const editButton = document.createElement('button')
+    editButton.innerHTML = '<i class="uil uil-pen"></i>'
+    editButton.addEventListener('click', () => {
+      // Set the selected product index and update the form inputs
+      selectedProductIndex = i
+      productNameInput.value = product.name
+      productPriceInput.value = product.price.toFixed(2)
+      numberOfproduct.value = product.TotalProductNum
+      addProductButton.textContent = 'Save'
+    })
+    const deleteButton = document.createElement('button')
+    deleteButton.innerHTML = '<i class="uil uil-trash-alt"></i>'
+    deleteButton.addEventListener('click', () => {
+      // Remove the selected product from the products array and update the table
+      products.splice(i, 1)
+      total = products.reduce(
+        (acc, currentValue) =>
+          acc + currentValue.price * currentValue.TotalProductNum,
+        0
+      )
+      remaining = totalMoneyInput.value - total
+      updateTable()
+      updateTotal()
+      updateRemaining()
+      productNameInput.value = ''
+      productPriceInput.value = ''
+      addProductButton.textContent = 'Add Product'
+    })
+    actionsCell.appendChild(editButton)
+    actionsCell.appendChild(deleteButton)
+    row.appendChild(nameCell)
+    row.appendChild(priceCell)
+    row.appendChild(actionsCell)
+    productTableBody.appendChild(row)
+  }
+}
+// Define the function to update the total value
+function updateTotal() {
+  totalValue.textContent = total.toFixed(2)
+}
+// Define the function to update the remaining value
+function updateRemaining() {
+  remainingValue.textContent = remaining.toFixed(2)
+}
+// Add an event listener to the Add Product button
+addProductButton.addEventListener('click', () => {
+  if (addProductButton.textContent === 'Add Product') {
+    addProduct()
+  } else if (addProductButton.textContent === 'Save') {
+    // Update the selected product and reset the form inputs
+    const selectedProduct = products[selectedProductIndex]
+    selectedProduct.name = productNameInput.value.trim()
+    selectedProduct.price = parseFloat(productPriceInput.value)
+    selectedProduct.TotalProductNum = parseInt(numberOfproduct.value)
+    console.log(selectedProduct)
+    // Calculate the new total and remaining values
+    total = products.reduce(
+      (acc, currentValue) =>
+        acc + currentValue.price * currentValue.TotalProductNum,
+      0
+    )
+    remaining = totalMoneyInput.value - total
+    // Update the table and total/remaining values
+    updateTable()
+    updateTotal()
+    updateRemaining()
+    // Reset the form inputs and selected product index
+    productNameInput.value = ''
+    productPriceInput.value = ''
+    numberOfproduct.value = ''
+    addProductButton.textContent = 'Add Product'
+    selectedProductIndex = -1
+  }
+})
+</script>
+<script>
+  //ITEM CONTROLLER
+const itemCtrl = (function(){
+    //item contructor
+    const Item = function(id, description, amount){
+        this.id = id;
+        this.description = description;
+        this.amount = amount;
+    }
+    //data structure
+    const data = {
+        items:[]
+    }
+    //public method
+    return{
+        logData: function(){
+            return data;
+        },
+        addMoney: function(description, amount){
+            //create random id
+            let ID = itemCtrl.createID();
+            //create new item
+            newMoney = new Item(ID, description, amount);
+            //push it into the array
+            data.items.push(newMoney);
+
+            return newMoney;
+        },
+        createID: function(){
+            //create random id number between 0 and 10000
+            const idNum = Math.floor(Math.random()*10000);
+            return idNum;
+        },
+        getIdNumber: function(item){
+            //get the item id
+            const amountId = (item.parentElement.id);
+            //break the id into an array
+            const itemArr = amountId.split('-');
+            //get the id number
+            const id = parseInt(itemArr[1]);
+
+            return id;
+        },
+        deleteAmountArr: function(id){
+            //get all the ids
+            const ids = data.items.map(function(item){
+                //return item with id
+                return item.id
+            });
+            //get index
+            const index = ids.indexOf(id)
+            //remove item
+            data.items.splice(index, 1);
+        }
+    }
+})();
+
+//UI CONTROLLER
+const UICtrl = (function(){
+    //ui selectors
+    const UISelectors = {
+        incomeBtn: '#add__income',
+        expenseBtn: '#add__expense',
+        description: '#description',
+        amount: '#amount',
+        moneyEarned: '#amount__earned',
+        moneyAvailable: '#amount__available',
+        moneySpent: '#amount__spent',
+        incomeList: '#income__container',
+        expensesList: '#expenses__container',
+        incomeItem: '.income__amount',
+        expenseItem: '.expense__amount',
+        itemsContainer: '.items__container'
+    }
+    //public methods
+    return{
+        //return ui selectors
+        getSelectors: function(){
+            return UISelectors
+        },
+        getDescriptionInput: function(){
+            return {
+                descriptionInput: document.querySelector(UISelectors.description).value
+            }
+        },
+        getValueInput: function(){
+            return{
+                amountInput: document.querySelector(UISelectors.amount).value
+            }
+        },
+        addIncomeItem: function(item){
+            //create new div
+            const div = document.createElement('div');
+            //add class
+            div.classList = 'item income'
+            //add id to the item
+            div.id = `item-${item.id}`
+            //add html
+            div.innerHTML = `
+            <h4>${item.description}</h4>
+            <div class="item__income">
+                <p class="symbol">$</p>
+                <span class="income__amount">${item.amount}</span>
+            </div>
+            <i class="far fa-trash-alt"></i>
+            `;
+            //insert income into the list
+            document.querySelector(UISelectors.incomeList).insertAdjacentElement('beforeend', div);
+        },
+        clearInputs: function(){
+            document.querySelector(UISelectors.description).value = ''
+            document.querySelector(UISelectors.amount).value = ''
+        },
+        updateEarned: function(){
+            //all income elements
+            const allIncome = document.querySelectorAll(UISelectors.incomeItem);
+            //array with all incomes
+            const incomeCount = [...allIncome].map(item => +item.innerHTML);
+            //calculate the total earned
+            const incomeSum = incomeCount.reduce(function(a,b){
+                return a+b
+            },0);
+            //display the total earned
+            const earnedTotal = document.querySelector(UISelectors.moneyEarned).innerHTML = incomeSum.toFixed(2);
+        },
+        addExpenseItem: function(item){
+            //create new div
+            const div = document.createElement('div');
+            //add class
+            div.classList = 'item expense';
+            //add id to the item
+            div.id = `item-${item.id}`;
+            //add html
+            div.innerHTML = `
+            <h4>${item.description}</h4>
+            <div class="item__expense">
+                <p class="symbol">$</p>
+                <span class="expense__amount">${item.amount}</span>
+            </div>
+            <i class="far fa-trash-alt"></i>
+            `;
+            //insert income into the list
+            document.querySelector(UISelectors.expensesList).insertAdjacentElement('beforeend', div);
+        },
+        updateSpent: function(){
+            //all expenses elements
+            const allExpenses = document.querySelectorAll(UISelectors.expenseItem);
+            //array with all expenses
+            const expenseCount = [...allExpenses].map(item => +item.innerHTML)
+            //calculate the total
+            const expenseSum = expenseCount.reduce(function(a, b){
+                return a+b
+            },0)
+            // display the total spent
+            const expensesTotal = document.querySelector(UISelectors.moneySpent).innerHTML = expenseSum;
+        },
+        updateAvailable: function(){
+            const earned = document.querySelector(UISelectors.moneyEarned);
+            const spent = document.querySelector(UISelectors.moneySpent)
+            const available = document.querySelector(UISelectors.moneyAvailable);
+            available.innerHTML = ((+earned.innerHTML)-(+spent.innerHTML)).toFixed(2)
+        },
+        deleteAmount: function(id){
+            //create the id we will select
+            const amountId = `#item-${id}`;
+            //select the amount with the id we passed
+            const amountDelete = document.querySelector(amountId);
+            //remove from ui
+            amountDelete.remove();
+        }
+    }
+})();
+
+//APP CONTROLLER
+const App = (function(){
+    //event listeners
+    const loadEventListeners = function(){
+        //get ui selectors
+        const UISelectors = UICtrl.getSelectors();
+        //add new income
+        document.querySelector(UISelectors.incomeBtn).addEventListener('click', addIncome);
+        //add new expense
+        document.querySelector(UISelectors.expenseBtn).addEventListener('click', addExpense);
+        //delete item
+        document.querySelector(UISelectors.itemsContainer).addEventListener('click', deleteItem);
+    }
+
+    //add new income
+    const addIncome = function(){
+        //get description and amount values
+        const description = UICtrl.getDescriptionInput();
+        const amount = UICtrl.getValueInput();
+        //if inputs are not empty
+        if(description.descriptionInput !=='' && amount.amountInput !== ''){
+            //add new item
+            const newMoney = itemCtrl.addMoney(description.descriptionInput, amount.amountInput);
+            //add item to the list
+            UICtrl.addIncomeItem(newMoney);
+            //clear inputs
+            UICtrl.clearInputs();
+            //update earned
+            UICtrl.updateEarned();
+            //calculate money available
+            UICtrl.updateAvailable();
+        }
+    }
+
+    //add new expense
+    const addExpense = function(){
+        //get description and amount values
+        const description = UICtrl.getDescriptionInput();
+        const amount = UICtrl.getValueInput();
+        //if inputs are not empty
+        if(description.descriptionInput !=='' && amount.amountInput !== ''){
+            //add new item
+            const newMoney = itemCtrl.addMoney(description.descriptionInput, amount.amountInput);
+            //add item to the list
+            UICtrl.addExpenseItem(newMoney);
+            //clear inputs
+            UICtrl.clearInputs();
+            //update total spent
+            UICtrl.updateSpent();
+            //calculate money available
+            UICtrl.updateAvailable();
+        }
+    }
+
+    //delete item
+    const deleteItem = function(e){
+        if(e.target.classList.contains('far')){
+            //get id number
+            const id = itemCtrl.getIdNumber(e.target)
+            //delete amount from ui
+            UICtrl.deleteAmount(id);
+            //delete amount from data
+            itemCtrl.deleteAmountArr(id);
+            //update earned
+            UICtrl.updateEarned();
+            //update total spent
+            UICtrl.updateSpent();
+            //calculate money available
+            UICtrl.updateAvailable();
+        }
+
+        e.preventDefault()
+    }
+
+    //init function
+    return{
+        init: function(){
+            loadEventListeners();
+        }
+    }
+
+})(itemCtrl, UICtrl);
+
+App.init();
+
+</script>
 </body>
 </html>
