@@ -1,0 +1,113 @@
+
+.expense{
+    font-family: Arial, sans-serif;
+  color: #eee;
+  background: #141e30;
+  background: linear-gradient(to right, #243b55, #141e30);
+  
+  
+}
+.btn-expenses{
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding: 10px 20px;
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background-color: #219ebc;
+  color: #fff;
+  border-radius: 3px;
+}
+h1.heading {
+  text-align: center;
+  margin-block: 50px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.wrapper .container {
+  max-width: 992px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-items: flex-start;
+  gap: 60px;
+}
+.form_wrapper {
+  display: grid;
+  gap: 30px;
+}
+.form_wrapper form:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form_wrapper form input {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  outline: none;
+  border: 1px solid #aaa;
+  background-color: transparent;
+  border-radius: 3px;
+  color: #eee;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+table button {
+  padding: 5px;
+  font-size: 20px;
+  background-color: #00bbf9;
+}
+table button:first-child {
+  margin-right: 8px;
+}
+#product-table thead th {
+  font-size: 18px;
+  color: #eee;
+}
+.budget_tacker_info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.budget_tacker_info > div:last-child {
+  grid-column: span 2;
+}
+.budget_tacker_info > div {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  font-size: 25px;
+  border-bottom: 2px solid #ff0000;
+}
+.budget_tacker_info > div:nth-child(2) {
+  border-color: #ff5300;
+}
+.budget_tacker_info > div:last-child {
+  border-color: #00ff00;
+}
+.budget_tacker_info > div h1 {
+  margin-block: 20px;
+  word-break: break-all;
+  font-size: 30px;
+}

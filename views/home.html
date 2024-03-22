@@ -1,0 +1,350 @@
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness</title>
+    <link rel="stylesheet" href="../public/main.css">
+    <link rel="stylesheet" href="../public/expense.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    
+</head>
+<body>
+    <!--Header-=====================-->
+ <header>
+     <nav>
+         <div class="nav-container">
+             <img src="../public/logo.svg" alt="logo" class="logo">
+             <div class="btn">
+                 <div class="line1"></div>
+                 <div class="line2"></div>
+                 <div class="line3"></div>
+             </div>
+         </div>
+         <!--For links-->
+         <ul class="nav-links">
+             <li><a href="">Home</a></li>
+             <li><a href="#about-info">About</a></li> 
+             <li><a href="#workout">Expense Tracker</a></li>
+             <li><a href="#subscribe">Contact</a></li>
+             <li class="social-icons">
+                 <a href="#"><i class="fab fa-facebook"></i></a>
+                 <a href="#"><i class="fab fa-instagram"></i></a>
+                 <a href="#"><i class="fab fa-twitter"></i></a>
+                 <a href="#"><i class="fab fa-linkedin"></i></a>
+
+             </li>
+
+
+          <!---  <li class="search"><a href="#"class="search-icon">
+                 <i class="fa fa-search"></i>
+             </a></li>-->
+         </ul>
+         <!---End of links-->
+        
+     </nav>
+<!----Hero Image-->
+<div class="main-title">
+    <div class="main-text">
+        <h1>
+          Financial Management</h1>
+        <p>Master Your Money: 
+            </p>
+            <a href="#section-center"><button type="button" class="btn about-btn btn-primary" >Get Started</button></a>
+            
+             
+    </div>
+</div>
+ </header>
+ <!--=============End of Header=============-->
+   <!---About Section-----------=============-->
+   <section class="about"  id="about-info">
+     <div class="about-center section-center" >
+           <!--About Info============-->
+           <article class="about-info">
+               <div>
+               <h2>Welcome to Financial Management for Students!</h2>
+               <p class="abt-text"> We're here to help college students like you take control of your finances with ease.<br>
+                <ul>
+                  <li>
+                      <h3>Budgeting and Expense Tracking</h3>
+                      <p>Stay on top of your spending with personalized budgets and easy expense tracking.</p>
+                  </li>
+                  <br>
+                  <li>
+                      <h3>Goal Setting</h3>
+                      <p>Set and achieve your financial goals, whether it's saving for tuition or planning a trip.</p>
+                  </li> <br>
+                  <li>
+                      <h3>Financial Education</h3>
+                      <p>Access resources to boost your financial literacy and make informed decisions.</p>
+                  </li> <br>
+                  <li>
+                      <h3>Alerts and Integration</h3>
+                      <p>Receive alerts for overspending and integrate with your banking platforms for seamless management.</p>
+                  </li> <br>
+              </ul>
+              
+            </p>
+                <a href="#section-center" class="about-btn">Expense Tracker</a>
+                <a href="#testimonial" class="about-btn">financial Education Resources</a>
+                <a href="#subscribe" class="about-btn">financial Education Resources</a>
+                </div>
+              </article>
+       </div>
+   </section>
+
+   <!--End of About Section====================-->
+   <!--==============Work out section=====================-->
+   <section id="workout" class="expense">
+      <div class="section-center" id="section-center">
+       <!--title-============-->
+       <h1 class="heading" id="heading">Product Expenses Tracker</h1>
+       <div class="wrapper">
+         <div class="container">
+           <div class="form_wrapper">
+            <form method="POST" action="/addProduct">
+               <label for="total-money">Total Budget:</label>
+               <input type="number" id="total_budget" />
+             </form>
+             <form>
+               <div>
+                 <label for="product-name">Product Name:</label>
+                 <input type="text" id="product_name" />
+               </div>
+               <div>
+                 <label for="product-price">Price:</label>
+                 <input type="number" id="product_price" />
+               </div>
+               <div>
+                 <label for="numberofproduct">Number of Product:</label>
+                 <input
+                   type="number"
+                   id="numberofproduct"
+                   min="1"
+                   max="100000"
+                   value="1"
+                 />
+               </div>
+               <button type="button" class="btn-expenses" id="add_product">Add Product</button>
+             </form>
+           </div>
+           <div class="product_table_and_result">
+             <table id="product_table">
+               <thead>
+                 <tr>
+                   <th>Product Name</th>
+                   <th>Price</th>
+                   <th>Actions</th>
+                 </tr>
+               </thead>
+               <tbody></tbody>
+             </table>
+             <div class="budget_tacker_info">
+               <div>
+                 <span>Expenses</span>
+                 <h1 id="total_expenses">0</h1>
+               </div>
+               <div>
+                 <span>Remaining</span>
+                 <h1 id="remaining_value">0</h1>
+               </div>
+               <div>
+                 <span>Total Money</span>
+                 <h1 id="total">0</h1>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+      
+       </div>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--=========End of Work out Section===============-->
+ <!--=========Testimonial  Section===============-->
+ <section id="testimonial">
+    <div class="section-center">
+     <!--title-============-->
+     
+     <div class="slider-wrapper">
+      <button id="prev-slide" class="slide-button material-symbols-rounded">
+       
+      </button>
+      <ul class="image-list">
+        <iframe class="image-item" width="560" height="315" src="https://www.youtube.com/embed/MpADdBwXMm0?si=4EOfcwxr9Swuol7G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="image-item" width="560" height="315" src="https://www.youtube.com/embed/-FP7IVNN4bI?si=dS4GoIaINVBT7osI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="image-item" width="560" height="315" src="https://www.youtube.com/embed/u-ZkfX9JFro?si=IguPl9IJTL0vxXNW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="image-item" width="560" height="315" src="https://www.youtube.com/embed/d2RBsln_Qu4?si=iwHhjB8QHhea3W8L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="image-item" width="560" height="315" src="https://www.youtube.com/embed/MpADdBwXMm0?si=4EOfcwxr9Swuol7G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="image-item" width="560" height="315" src="https://www.youtube.com/embed/-FP7IVNN4bI?si=dS4GoIaINVBT7osI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="image-item" width="560" height="315" src="https://www.youtube.com/embed/u-ZkfX9JFro?si=IguPl9IJTL0vxXNW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="image-item" width="560" height="315" src="https://www.youtube.com/embed/d2RBsln_Qu4?si=iwHhjB8QHhea3W8L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </ul>
+      <button id="next-slide" class="slide-button material-symbols-rounded">
+        chevron_right
+      </button>
+    </div>
+    <div class="slider-scrollbar">
+      <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
+      </div>
+    </div>
+
+  
+  
+
+     </div>
+ </section>
+ <!--==============End of Testimonial Section===========-->
+<!--==============Classes Section===========-->
+<section id="classes">
+    <div class=" section-center">
+     <!--title-============-->
+     <div>
+        <h3 class="title">Our Classes</h3>
+    </div>
+    <!--End of title===================-->
+    <div class="classes-container">
+        <!--Classes-->
+        <article class="class-item">
+            <!--Card-->
+            <div class="img-container">
+                <img src="images/class1.jpg" alt="class1">
+            </div>
+            <div class="text-container">
+                <h4>Weights</h4>
+                
+            </div>
+            <!--end of card-->
+        </article>
+        <!--End of classes-->
+        <!--Classes-->
+        <article class="class-item">
+            <!--Card-->
+            <div class="img-container">
+                <img src="images/class2.jpg" alt="class1">
+            </div>
+            <div class="text-container">
+                <h4>Crossfit</h4>
+                
+            </div>
+            <!--end of card-->
+        </article>
+        <!--End of classes-->
+<!--Classes-->
+<article class="class-item">
+    <!--Card-->
+    <div class="img-container">
+        <img src="images/class3.jpg" alt="class1">
+    </div>
+    <div class="text-container">
+        <h4>Pilates</h4>
+        
+    </div>
+    <!--end of card-->
+</article>
+<!--End of classes-->
+    
+    </div>
+    </div>
+</section>
+<!--==============End of Classes Section===========-->
+<!----===========Subscription Section-----=======----->
+<section class="subscribe" id="subscribe">
+      <!--title-============-->
+      <div>
+        <h3 class="title">Get More Info</h3>
+    </div>
+    <!--End of title===================-->
+   <form>
+       <div class="input-group">
+           <input type="email" class="form-control" placeholder="Email">
+           <button type="submit" class="btn-submit">Submit</button>
+       </div>
+   </form>
+
+</section>
+<!--========End of subscription=========-->
+<!---Footer===========-->
+<footer>
+    <div class="footer-text">
+        <h4>Copy right &copy; 2020. All rights reserved</h4>
+    </div>
+    <div class="terms">
+        <h4>Privacy & Terms &nbsp; Contact</h4>
+    </div>
+    
+</footer>
+<!--=============End of Footer===========-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!---Script js-->
+    <script src="../public/expense.js"></script>
+    <script src="../public/main.js"></script>
+    <script>
+      window.onload = function() {
+          var videos = document.querySelectorAll('iframe');
+          videos.forEach(function(video) {
+              video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+          });
+      }
+  </script>
+
+</body>
+</html>
