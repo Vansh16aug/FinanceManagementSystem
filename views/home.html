@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceTracker</title>
-    <link rel="shortcut icon" href="https://icons8.com/icon/yNOfPxtvNX17/euro-money" type="image/x-icon">
+    <link rel="shortcut icon" href="./download.png" type="image/x-icon">
     <link rel="stylesheet" href="../public/main.css">
     <link rel="stylesheet" href="../public/expense.css">
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
@@ -845,7 +845,7 @@ table button:first-child {
              <li><a href="#subscribe">Contact</a></li>
              <li class="social-icons">
                  <a href="https://www.facebook.com/profile.php?id=100087964216540" target="_blank"><i class="fab fa-facebook"></i></a>
-                 <a href="https://www.instagram.com/__itz_tarun__"><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.instagram.com/itz_tarun"><i class="fab fa-instagram"></i></a>
                  <a href="https://twitter.com/Kumar_Vansh_16" target="_blank"><i class="fab fa-twitter"></i></a>
                  <a href="https://www.linkedin.com/in/vansh-kumar16aug/" target="_blank"><i class="fab fa-linkedin"></i></a>
 
@@ -1369,7 +1369,7 @@ const UICtrl = (function(){
         },
         deleteAmount: function(id){
             //create the id we will select
-            const amountId = `#item-${id}`;
+            const amountId =`#item-${id}`;
             //select the amount with the id we passed
             const amountDelete = document.querySelector(amountId);
             //remove from ui
@@ -1460,6 +1460,47 @@ const App = (function(){
     }
 
 })(itemCtrl, UICtrl);
+// Define the function to add a new product
+function addProduct() {
+  // Get the product name and price from the input fields
+  const name = productNameInput.value.trim()
+  const price = parseFloat(productPriceInput.value)
+  const number = parseInt(numberOfproduct.value)
+  // Validate the input fields
+  if (name === '' || isNaN(price)) {
+    alert('Please enter a valid product name and price.')
+    return
+  }
+  // Add the new product to the products array
+  products.push({
+    name: name,
+    TotalProductNum: number,
+    price: price,
+  })
+  // Calculate the new total and remaining values
+  total = products.reduce(
+    (acc, currentValue) =>
+      acc + currentValue.price * currentValue.TotalProductNum,
+    0
+  )
+  remaining = totalMoneyInput.value - total
+  totalMoney.textContent = totalMoneyInput.value
+
+  // Check if the total expenses exceed the total budget
+  const totalBudget = parseFloat(totalMoneyInput.value);
+  if (total > totalBudget) {
+    alert('You are spending more than your total budget limit!');
+  }
+
+  // Update the table and total/remaining values
+  updateTable()
+  updateTotal()
+  updateRemaining()
+  // Clear the input fields
+  productNameInput.value = ''
+  productPriceInput.value = ''
+  numberOfproduct.value = ''
+}
 
 App.init();
 
