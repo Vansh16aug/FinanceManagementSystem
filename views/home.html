@@ -958,22 +958,21 @@ table button:first-child {
        <div class="wrapper">
          <div class="container">
            <div class="form_wrapper">
-            <form method="POST" action="/addProduct">
+            <form method="POST" action="/addproduct">
                <label for="total-money">Total Budget:</label>
-               <input type="number" id="total_budget" />
-             </form>
-             <form>
+               <input type="number" id="total_budget" name="totalBudget"/>
                <div>
                  <label for="product-name">Product Name:</label>
-                 <input type="text" id="product_name" />
+                 <input type="text" id="product_name" name="productName"/>
                </div>
                <div>
                  <label for="product-price">Price:</label>
-                 <input type="number" id="product_price" />
+                 <input type="number" id="product_price" name="productPrice"/>
                </div>
                <div>
                  <label for="numberofproduct">Number of Product:</label>
                  <input
+                 name="numberOfProduct"
                    type="number"
                    id="numberofproduct"
                    min="1"
@@ -981,7 +980,7 @@ table button:first-child {
                    value="1"
                  />
                </div>
-               <button type="button" class="btn-expenses" id="add_product">Add Product</button>
+               <button type="submit"  class="btn-expenses" id="add_product">Add Product</button>
              </form>
            </div>
            <div class="product_table_and_result">
@@ -1071,9 +1070,6 @@ table button:first-child {
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!---Script js-->
-    <script src="../public/expense.js"></script>
-    <script src="../public/main.js"></script>
     <script>
       window.onload = function() {
           var videos = document.querySelectorAll('iframe');
@@ -1446,12 +1442,12 @@ const App = (function(){
             const newMoney = itemCtrl.addMoney(description.descriptionInput, amount.amountInput);
             //add item to the list
             UICtrl.addExpenseItem(newMoney);
-            //clear inputs
-            UICtrl.clearInputs();
-            //update total spent
-            UICtrl.updateSpent();
-            //calculate money available
-            UICtrl.updateAvailable();
+            // //clear inputs
+            // UICtrl.clearInputs();
+            // //update total spent
+            // UICtrl.updateSpent();
+            // //calculate money available
+            // UICtrl.updateAvailable();
         }
     }
 
@@ -1520,9 +1516,9 @@ function addProduct() {
   updateTotal()
   updateRemaining()
   // Clear the input fields
-  productNameInput.value = ''
-  productPriceInput.value = ''
-  numberOfproduct.value = ''
+//   productNameInput.value = ''
+//   productPriceInput.value = ''
+//   numberOfproduct.value = ''
 }
 
 App.init();

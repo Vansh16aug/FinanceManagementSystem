@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const collection = require("./config");
+const {collection,product} = require("./config");
 const bcrypt = require('bcrypt');
 
 const app = express();
@@ -48,6 +48,7 @@ app.post("/signup", async (req, res) => {
 
         const userdata = await collection.insertMany(data);
         console.log(userdata);
+        res.sendFile(path.join(__dirname, "../views/login.html"));
     }
 
 });
@@ -73,6 +74,20 @@ app.post("/login", async (req, res) => {
     }
 });
 
+app.post("/addproduct", async (req, res) => {
+    console.log("Route /addproduct hit");
+    const data = {
+        totalBudget: req.body.totalBudget,
+        productName: req.body.productName,
+        productPrice: req.body.productPrice,
+        numberOfProduct: req.body.numberOfProduct
+    }
+    
+    const productdata = await product.insertMany(data);
+    console.log(productdata);
+    res.sendFile(path.join(__dirname, "../views/home.html"));
+}
+);
 
 // Define Port for Application
 const port = 5000;
